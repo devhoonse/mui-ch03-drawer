@@ -90,7 +90,7 @@ const initialItems: DrawerGroupsType = {
  */
 type WithStylesComponentProps = WithStyles<typeof styles>;
 type DrawerNavigationProps = WithStylesComponentProps
-function DrawerSection ({ classes }: DrawerNavigationProps) {
+const DrawerSection = withStyles(styles)(({ classes }: DrawerNavigationProps) => {
 
     /**
      * get proxy of the location object for browser router
@@ -227,5 +227,5 @@ function DrawerSection ({ classes }: DrawerNavigationProps) {
             </Grid>
         </Grid>
     );
-}
-export default withStyles(styles)(DrawerSection);
+})
+export default DrawerSection;

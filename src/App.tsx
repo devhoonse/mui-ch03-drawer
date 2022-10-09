@@ -12,8 +12,11 @@ import './App.css';
 // /* s03-spa */
 // import DrawerNavigationApp from "./components/s03-spa/example01";
 
-/* s04-subheader */
-import DrawerSectionApp from "./components/s04-subheader/example01";
+// /* s04-subheader */
+// import DrawerSectionApp from "./components/s04-subheader/example01";
+
+/* s05-withAppBar */
+import AppBarInteraction from "./components/s05-withAppBar/example01";
 
 function App() {
   // /* s01-types */
@@ -38,11 +41,19 @@ function App() {
   //     </BrowserRouter>
   // );
 
-  /* s04-subheader */
+  // /* s04-subheader */
+  // return (
+  //     <BrowserRouter>
+  //         {/*@ts-ignore*/}
+  //         <DrawerSectionApp />
+  //     </BrowserRouter>
+  // );
+
+  /* s05-withAppBar */
   return (
       <BrowserRouter>
           {/*@ts-ignore*/}
-          <DrawerSectionApp />
+          <AppBarInteraction drawerVariant="persistent" />
       </BrowserRouter>
   );
 }
